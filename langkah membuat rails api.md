@@ -36,8 +36,26 @@
     end
     ```
   
-  * adanya namespace api
+  * adanya namespace api ?? (masih bingung)
     * bila mau user akan menjadi localhost/users/api/1 
+  * common API pattern
+    * api.example.com = depannya api
+    * example.com/api/
+    * example.com/api/v1 
   * defaults artinya semua lalulintas 
     * data melewati routes tersebut formatnya json
-  *   
+  * membuat versi API
+    * mkdir app/controllers/api/v1
+    * buka routes.rb dan tambahkan namespacenya sbb:
+
+      ```ruby
+        Rails.application.routes.draw do
+          namespace :api, defaults: { format: json } do
+            namespace :v1 do
+                  
+            end
+          end
+        end
+      ```
+
+  * 
