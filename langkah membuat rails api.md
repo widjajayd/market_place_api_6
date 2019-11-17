@@ -20,4 +20,24 @@
     * git push -u origin master
       * username: widjajaydror@gmail.com
       * pass sur AB
-    * 
+
+### 02 membuat api user
+
+  * mkdir app/controllers/api
+    * membuat folder api di dalam controller
+    * ini digunakan untuk keperluan namespace
+  * buka config/routes.rb
+
+    ```ruby
+    Rails.application.routes.draw do
+      namespace :api, defaults: { format: json } do
+        
+      end
+    end
+    ```
+  
+  * adanya namespace api
+    * bila mau user akan menjadi localhost/users/api/1 
+  * defaults artinya semua lalulintas 
+    * data melewati routes tersebut formatnya json
+  *   
